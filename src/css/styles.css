@@ -1,0 +1,176 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    color: #fff;
+    background: #000;
+    overflow-x: hidden;
+    padding: 40px;
+}
+
+/* ===== FONDO CYBERPUNK ===== */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: 
+        linear-gradient(45deg, rgba(0,255,255,0.08) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,0,255,0.08) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(0,255,255,0.08) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,0,255,0.08) 75%);
+    background-size: 80px 80px;
+    opacity: 0.25;
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, rgba(0,255,255,0.15), transparent 60%),
+                radial-gradient(circle, rgba(255,0,255,0.15), transparent 60%);
+    z-index: -1;
+}
+
+/* ===== NAV ===== */
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ===== TYPING ===== */
+
+.typing {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* cursor */
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%,100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ===== GLITCH ===== */
+
+.glitch {
+    position: relative;
+    animation: glitch-skew 1s infinite alternate;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* rojo */
+.glitch::before {
+    color: #ff00c1;
+    left: 2px;
+    text-shadow: -2px 0 #ff00c1;
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+/* cyan */
+.glitch::after {
+    color: #00fff9;
+    left: -2px;
+    text-shadow: -2px 0 #00fff9;
+    animation: glitch-anim2 2.5s infinite linear alternate-reverse;
+}
+
+/* hover más fuerte */
+.glitch:hover {
+    animation: glitch-skew 0.2s infinite;
+}
+
+.glitch:hover::before,
+.glitch:hover::after {
+    animation-duration: 0.2s;
+    text-shadow: -4px 0 currentColor;
+}
+
+/* ===== ANIMACIONES GLITCH ===== */
+
+@keyframes glitch-anim {
+    0% { clip-path: inset(0 0 80% 0); }
+    20% { clip-path: inset(40% 0 30% 0); }
+    40% { clip-path: inset(80% 0 5% 0); }
+    60% { clip-path: inset(50% 0 20% 0); }
+    80% { clip-path: inset(60% 0 10% 0); }
+    100% { clip-path: inset(0 0 80% 0); }
+}
+
+@keyframes glitch-anim2 {
+    0% { clip-path: inset(80% 0 0 0); }
+    20% { clip-path: inset(30% 0 40% 0); }
+    40% { clip-path: inset(5% 0 80% 0); }
+    60% { clip-path: inset(20% 0 50% 0); }
+    80% { clip-path: inset(10% 0 60% 0); }
+    100% { clip-path: inset(80% 0 0 0); }
+}
+
+@keyframes glitch-skew {
+    0% { transform: skew(0deg); }
+    50% { transform: skew(2deg); }
+    100% { transform: skew(-2deg); }
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== FORM ===== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+}
+
+input, button {
+    padding: 10px;
+    border: none;
+}
+
+button {
+    background: #00fff9;
+    cursor: pointer;
+}
