@@ -88,18 +88,39 @@ nav a {
     100% { transform: skew(2deg); }
 }
 
+
+
+
 /* ===== GLITCH H2 / H3 ===== */
 
+/* ===== ESTILOS BASE PARA H2 / H3 ===== */
 h2, h3 {
-    position: relative;
+
     color: #fff;
-    font-size: 40px;
+    
     font-weight: bold;
+}
+
+h2 { 
+    font-size: 40px; 
+    margin-bottom: 20px;
+}
+
+/* Tamaño más pequeño y normal para los títulos de las cartillas */
+h3 { 
+    font-size: 22px; 
+} 
+
+
+/* ===== GLITCH SOLO PARA TÍTULOS CON EL ATRIBUTO "data-glitch" ===== */
+h2[data-glitch], h3[data-glitch] {
+    position: relative;
+    font-size: 40px; /* Mantiene grandes los títulos de sección que tienen glitch */
     animation: an1 1s ease-in-out infinite alternate;
 }
 
-h2::before, h2::after,
-h3::before, h3::after {
+h2[data-glitch]::before, h2[data-glitch]::after,
+h3[data-glitch]::before, h3[data-glitch]::after {
     content: attr(data-glitch);
     position: absolute;
     top: 0;
@@ -107,13 +128,13 @@ h3::before, h3::after {
     opacity: 0.8;
 }
 
-h2::before, h3::before {
+h2[data-glitch]::before, h3[data-glitch]::before {
     color: #8b00ff;
     z-index: -1;
     animation: an2 0.4s infinite;
 }
 
-h2::after, h3::after {
+h2[data-glitch]::after, h3[data-glitch]::after {
     color: #00e571;
     z-index: -2;
     animation: an2 0.4s infinite;
