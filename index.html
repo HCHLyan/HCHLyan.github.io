@@ -11,9 +11,6 @@
     <meta name="author" content="Lyan Páez">
     <meta name="robots" content="index, follow">
 
-    
-
-
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
 
@@ -22,6 +19,7 @@
 <header>
     <nav>
         <ul>
+            <li><a href="#about">About me</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -30,7 +28,7 @@
 
 <main>
 
-<section id="experience">
+<section>
     <div>
         <h1 class="glitch reveal" data-text="Lyan's portfolio"></h1>
     </div>
@@ -39,7 +37,7 @@
         alt="A close-up photo of Lyan facing the camera"
         title="Lyan's photo">
 
-    <p><br>
+    <p class="center" id="about"><br>
         I'm Lyan Páez. Business Manager graduated at Universidad del Atlántico.
         Specialized on leading business teams and hackatons on business simulations.
     </p>
@@ -53,80 +51,111 @@
     </p>
 </section>
 
-<section>
+<section id="experience">
     <h2 data-glitch="Projects">Projects</h2>
 
-    <div class="grid">
+    <div class="scroll-container projects-scroll">
+        <div class="scroll-content">
+            <article class="card">
+                <h3>Cesim Elite 2025</h3>
+                <p> I was the mentor of 3 teams representing Universidad del Atlántico. All 3 teams were Colombia's champions. 2 of them were into the top 3 in Latin America Qualifiers. One of them was on the top 10 worldwide.</p>
+            </article>
+            <article class="card">
+                <h3>Companygame 2024</h3>
+                <p>As a Team Leader my team was awarded with the "BEST BUSINESS MANAGEMENT ANALYSIS".</p>
+            </article>
+            <article class="card">
+                <h3>Cesim Elite 2024</h3>
+                <p> As a Team Leader, we got into the top 10 in the Latin American qualifier.</p>
+            </article>
+            <article class="card">
+                <h3>Award</h3>
+                <p> Thanks to this achievings, the Departmental Assembly of Atlántico awarded me with "Premio Joven Líder protagonista del cambio 2025"..</p>
+            </article>
 
-        <article class="card">
-            <h3>Cesim Elite 2025</h3>
-            <p> I was the mentor of 3 teams representing
-            Universidad del Atlántico. All 3 teams were Colombia's champions. 2 of them
-            were into the top 3 in Latin America Qualifiers. One of them was on the top 10
-            worldwide.
-            </p>
-        </article>
-
-        <article class="card">
-            <h3>Companygame 2024</h3>
-            <p>As a Team Leader my team was awarded with the
-            "BEST BUSINESS MANAGEMENT ANALYSIS".</p>
-        </article>
-
-        <article class="card">
-            <h3>Cesim Elite 2024</h3>
-            <p> As a Team Leader, we got into the top 10 in the
-            Latin American qualifier.
-            </p>
-        </article>
-        
-        <article class="card">
-            <h3>Award</h3>
-            <p> Thanks to this achievings, the Departmental Assembly of Atlántico awarded me with
-        "Premio Joven Líder protagonista del cambio 2025"..
-            </p>
-        </article>
+            <article class="card duplicate">
+                <h3>Cesim Elite 2025</h3>
+                <p> I was the mentor of 3 teams representing Universidad del Atlántico. All 3 teams were Colombia's champions. 2 of them were into the top 3 in Latin America Qualifiers. One of them was on the top 10 worldwide.</p>
+            </article>
+            <article class="card duplicate">
+                <h3>Companygame 2024</h3>
+                <p>As a Team Leader my team was awarded with the "BEST BUSINESS MANAGEMENT ANALYSIS".</p>
+            </article>
+            <article class="card duplicate">
+                <h3>Cesim Elite 2024</h3>
+                <p> As a Team Leader, we got into the top 10 in the Latin American qualifier.</p>
+            </article>
+            <article class="card duplicate">
+                <h3>Award</h3>
+                <p> Thanks to this achievings, the Departmental Assembly of Atlántico awarded me with "Premio Joven Líder protagonista del cambio 2025"..</p>
+            </article>
+        </div>
     </div>
 </section>
 
 <section class="evidences-section">
     <h2 data-glitch="Evidences">Evidences</h2>
 
-    <div class="grid">
-        <article>
-            <img src="public/img/CGame1.webp">
-            <h3>International Tournament</h3>
-            <p>My first participation internationally. And got the 4th place.</p>
-        </article>
-    
-        <article class="card img-card">
-            <img src="public/img/Cgame2.webp">
-            <h3>Best Analysis</h3>
-            <p>Best business management analysis award.</p>
-        </article>
-    
-        <article class="card img-card">
-            <img src="public/img/cesim1.webp">
-            <h3>Top 10 LATAM</h3>
-            <p>Top 10 Best teams of Latin America on Cesim Elite 2024.</p>
-        </article>
+    <div class="scroll-container evidences-scroll">
+        <div class="scroll-content">
+            <article class="card img-card">
+                <img src="public/img/CGame1.webp" class="expandable-image">
+                <h3>International Tournament</h3>
+                <p>My first participation internationally. And got the 4th place.</p>
+            </article>
+            <article class="card img-card">
+                <img src="public/img/Cgame2.webp" class="expandable-image">
+                <h3>Best Analysis</h3>
+                <p>Best business management analysis award.</p>
+            </article>
+            <article class="card img-card">
+                <img src="public/img/cesim1.webp" class="expandable-image">
+                <h3>Top 10 LATAM</h3>
+                <p>Top 10 Best teams of Latin America on Cesim Elite 2024.</p>
+            </article>
+            <article class="card img-card">
+                <img src="public/img/cesim2.webp" class="expandable-image">
+                <img src="public/img/cesim3.webp" class="expandable-image">
+                <h3>Mentoring</h3>
+                <p>As a mentor, all my teams are in the top.</p>
+            </article>
+            <article class="card img-card">
+                <img src="public/img/JL1.webp" class="expandable-image">
+                <img src="public/img/JL2.webp" class="expandable-image">
+                <img src="public/img/JL3.webp" class="expandable-image">
+                <h3>Personal awards</h3>
+                <p>Award for youth leader on academics due to these and other international achievements.</p>
+            </article>
 
-        <article class="card img-card">
-            <img src="public/img/cesim2.webp">
-            <img src="public/img/cesim3.webp">
-            <h3>Mentoring</h3>
-            <p>As a mentor, all my teams are in the top.</p>
-        </article>
-    </div>
-
-    <div class="grid"></div>
-        <article>
-            <img src="public/img/JL1.webp">
-            <img src="public/img/JL2.webp">
-            <img src="public/img/JL3.webp">
-            <h3>Personal awards</h3>
-            <p>Award for youth leader on academics due to these and other international achievements.</p>
-        </article>
+            <article class="card img-card duplicate">
+                <img src="public/img/CGame1.webp" class="expandable-image">
+                <h3>International Tournament</h3>
+                <p>My first participation internationally. And got the 4th place.</p>
+            </article>
+            <article class="card img-card duplicate">
+                <img src="public/img/Cgame2.webp" class="expandable-image">
+                <h3>Best Analysis</h3>
+                <p>Best business management analysis award.</p>
+            </article>
+            <article class="card img-card duplicate">
+                <img src="public/img/cesim1.webp" class="expandable-image">
+                <h3>Top 10 LATAM</h3>
+                <p>Top 10 Best teams of Latin America on Cesim Elite 2024.</p>
+            </article>
+            <article class="card img-card duplicate">
+                <img src="public/img/cesim2.webp" class="expandable-image">
+                <img src="public/img/cesim3.webp" class="expandable-image">
+                <h3>Mentoring</h3>
+                <p>As a mentor, all my teams are in the top.</p>
+            </article>
+            <article class="card img-card duplicate">
+                <img src="public/img/JL1.webp" class="expandable-image">
+                <img src="public/img/JL2.webp" class="expandable-image">
+                <img src="public/img/JL3.webp" class="expandable-image">
+                <h3>Personal awards</h3>
+                <p>Award for youth leader on academics due to these and other international achievements.</p>
+            </article>
+        </div>
     </div>
 </section>
 
@@ -142,6 +171,8 @@
         </ul>
     </article>
 
+    <br>
+
     <article>
         <h3>Soft skills</h3>
         <ul>
@@ -152,17 +183,17 @@
 
         <p>
             I'm specialized on leading and mentoring teams under pressure in competitive environments within deadlines.
-        </p>
+        </p> <br>
     </article>
 
     <article>
-        <h3 data-glitch="My story">My story</h3>
+        <h3 data-glitch="My story" >My story</h3>
         <p>
             I started as a common student without any knowledge about making business decisions
             (even the first time in a business simulation tournament, my company broke). But the experience and
             my courage to give the best of myself, born a leadership soul on my self-being. So, from 2023 until now, I'm
             leading Universidad del Atlántico Economics sciences international teams.
-        </p>
+        </p> <br>
     </article>
 
     <article>
@@ -172,7 +203,7 @@
                     <img src="public/img/instagram.png" alt="Instagram" class="social-icon">
                     Instagram
                 </a>
-            </li>
+            </li> <br>
 
 
             <li><a href="https://co.linkedin.com/in/lyan-v%C3%ADctor-p%C3%A1ez-ar%C3%A9valo-2025282ba" target="_blank">
@@ -203,7 +234,19 @@
     <p>&copy; 2026 Lyan Víctor Páez Arévalo. All rights reserved.</p>
 </footer>
 
+<div id="image-modal" class="modal-overlay">
+    <span class="modal-close-btn">&times;</span>
+    <img id="modal-image" class="modal-content" src="" alt="Imagen expandida">
+</div>
+
 <script>
+
+
+
+
+
+
+// --- JAVASCRIPT ---
 const text = "Lyan's portfolio";
 let i = 0;
 
@@ -240,6 +283,44 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
+
+
+// --- NUEVO CÓDIGO JS PARA EL MODAL DE IMÁGENES ---
+const modal = document.getElementById('image-modal');
+const modalImg = document.getElementById('modal-image');
+const closeBtn = document.querySelector('.modal-close-btn');
+
+// Agregar evento a todas las imágenes con la clase 'expandable-image'
+document.querySelectorAll('.expandable-image').forEach(img => {
+    img.addEventListener('click', function() {
+        modal.classList.add('open');
+        modalImg.src = this.src;
+        document.body.style.overflow = 'hidden'; // Esto evita scrollear la página por detrás
+    });
+});
+
+// Función para cerrar el modal
+function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = 'auto'; // Restaura el scroll
+}
+
+// Cerrar con el botón X
+closeBtn.addEventListener('click', closeModal);
+
+// Cerrar haciendo clic en el fondo negro oscuro
+modal.addEventListener('click', function(event) {
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
+// Cerrar presionando la tecla Esc
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});
 </script>
 
 </body>
