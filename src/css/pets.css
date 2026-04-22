@@ -1,5 +1,69 @@
+a{
+    text-decoration: none;
+    color: #BD00FF;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a:hover{
+    text-decoration: underline dashed;
+    color: #03D8F3;
+    transition: 0.3s ease;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
 .grid{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid article {
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.grid img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.hover:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+/* Media Queries */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .grid {
+        font-size: 14px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .grid {
+        font-size: 13px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .grid {
+        font-size: 13px;
+        grid-template-columns: 1fr;
+    }
 }
