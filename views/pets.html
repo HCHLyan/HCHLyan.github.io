@@ -1,72 +1,91 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lyan's pets</title>
+    <link rel="stylesheet" href="/src/css/pets.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lyan's pets</title>
-  <link rel="stylesheet" href="/src/css/pets.css">
-</head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Back to main portfolio</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Back to main portfolio</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section>
-      <h1>My pets</h1>
-      <p>
-        I'm an animal lover. So I don't own them, just let them live by
-        themselves.
-      </p>
-    </section>
-
-    <h2>My fictional pets</h2>
-    <section class="grid">
-      <article>
-        <h3>Phoenix</h3>
-        <img src="/public/images/pets/phoenix.webp" class="hover"/>
-        <p>
-          The legendary bird known for its ability to burn itself to death and
-          be reborn from its own ashes.
+    <main>
+      <section>
+        <h1 class="neon-title">My pets</h1>
+        <p class="center">
+          I'm an animal lover. So I don't own them, just let them live by
+          themselves.
         </p>
-      </article>
-      <article>
-        <h3>Pikachu</h3>
-        <img src="/public/images/pets/pikachu.webp" class="hover"/>
-        <p>The electric-type Mouse Pokémon.</p>
-      </article>
-      <article>
-        <h3>Kirara</h3>
-        <img src="/public/images/pets/kirara.webp" class="hover"/>
-        <p>The magical demon cat from Inuyasha.</p>
-      </article>
-      <article>
-        <h3>Luna</h3>
-        <img src="/public/images/pets/luna.webp" class="hover"/>
-        <p>The Sailor's moon black cat mentor</p>
-      </article>
-      <article>
-        <h3>Kirby</h3>
-        <img src="/public/images/pets/kirby.webp" class="hover"/>
-        <p>The Popstar planet's pink-spherical hero</p>
-      </article>
-      <article>
-        <h3>Kuriboh</h3>
-        <img src="/public/images/pets/kuriboh.webp" class="hover"/>
-        <p>The fluffy, brown lifesaver monster from the Yu-Gi-Oh! series.</p>
-      </article>
-    </section>
-  </main>
+      </section>
 
-  <footer>
-    <p>&copy; 2026 Lyan Víctor Páez Arévalo. All rights reserved.</p>
-  </footer>
-</body>
+      <h2 class="cyber-title" data-text="My fictional pets">My fictional pets</h2>
+      <section class="grid">
+        <article>
+          <h3 class="glitch-text">Phoenix</h3>
+          <img
+            src="/public/images/pets/phoenix.webp"
+            class="hover"
+            data-sound="/public/audio/phoenix.mp3"
+          />
+          <p>
+            The legendary bird known for its ability to burn itself to death and
+            be reborn from its own ashes.
+          </p>
+        </article>
+        <article>
+          <h3 class="glitch-text">Pikachu</h3>
+          <img src="/public/images/pets/pikachu.webp" 
+          class="hover" 
+          data-sound="/public/audio/pikachu.mp3"
+          />
+          <p>The electric-type Mouse Pokémon.</p>
+        </article>
+        <article>
+          <h3 class="glitch-text">Kirara</h3>
+          <img src="/public/images/pets/kirara.webp"
+          class="hover"
+          data-sound="/public/audio/kirara.mp3"
+          />
+          <p>The magical demon cat from Inuyasha.</p>
+        </article>
+        <article>
+          <h3 class="glitch-text">Luna</h3>
+          <img src="/public/images/pets/luna.webp"
+          class="hover"
+          data-sound="/public/audio/luna.mp3"/>
+          <p>The Sailor's moon black cat mentor</p>
+        </article>
+        <article>
+          <h3 class="glitch-text">Kirby</h3>
+          <img src="/public/images/pets/kirby.webp"
+          class="hover"
+          data-sound="/public/audio/kirby.mp3"
+          />
+          <p>The Popstar planet's pink-spherical hero</p>
+        </article>
+        <article>
+          <h3 class="glitch-text">Kuriboh</h3>
+          <img src="/public/images/pets/kuriboh.webp"
+          class="hover"
+          data-sound="/public/audio/kuriboh.mp3"
+          />
+          <p>The fluffy, brown lifesaver monster from the Yu-Gi-Oh! series.</p>
+        </article>
+      </section>
+    </main>
 
-</html> 
+    <footer>
+      <p>&copy; 2026 Lyan Víctor Páez Arévalo. All rights reserved.</p>
+    </footer>
+    <script 
+    src="/web.js/pets.js">
+    </script>
+  </body>
+</html>
