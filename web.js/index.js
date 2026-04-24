@@ -33,7 +33,7 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
 
-// --- CÓDIGO JS PARA EL MODAL DE IMÁGENES ---
+// --- CODE JS FOR MODAL IMAGES ---
 const modal = document.getElementById("image-modal");
 const modalImg = document.getElementById("modal-image");
 const closeBtn = document.querySelector(".modal-close-btn");
@@ -65,7 +65,7 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-/* ========== CHISPAS EN INPUTS =============*/
+/* ========== SPARKS ON INPUTS =============*/
 const inputs = document.querySelectorAll("input, textarea");
 
 inputs.forEach((input) => {
@@ -84,5 +84,29 @@ inputs.forEach((input) => {
     setTimeout(() => {
       particle.remove();
     }, 600);
+  });
+});
+
+
+/* ========================================================== */
+/* ===== HAMBURGUER MENU ====== */
+/* ========================================================== */
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+const navItems = document.querySelectorAll('.navigation');
+
+// OPEN/CLOSE MENU WHEN CLICK ON THE HAMBURGUER
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+});
+
+// CLOSE THE MENU AUTOMATICALLY WHEN CLICK ON A LINK
+navItems.forEach(item => {
+  item.addEventListener('click', () => {
+    if (hamburger.classList.contains('active')) {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    }
   });
 });

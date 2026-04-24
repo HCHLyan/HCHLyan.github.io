@@ -35,28 +35,28 @@ nav ul {
   padding: 20px;
 }
 
-/* --- ESTADO NORMAL DE LA TARJETA --- */
+/* --- NORMAL CARD STATUS --- */
 .grid article {
-  border: 1px solid #333; /* Borde oscuro y sutil apagado */
-  padding: 15px; /* Un poco más de espacio interno para que respire */
+  border: 1px solid #333; 
+  padding: 15px; 
   border-radius: 8px;
   text-align: center;
-  background-color: #080808; /* Fondo casi negro para que el neón resalte más */
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transición más fluida y profesional */
+  background-color: #080808; 
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
   z-index: 1;
 }
 
-/* --- ESTADO ACTIVO (CYBERPUNK HOVER) DE LA TARJETA --- */
+/* --- ACTIVE STATUS (CYBERPUNK HOVER) ON THE CARD --- */
 .grid article:hover {
-  transform: scale(1.03) translateY(-5px); /* Crece ligeramente y "flota" hacia arriba */
-  border-color: #03d8f3; /* El borde se enciende en cyan */
+  transform: scale(1.03) translateY(-5px); 
+  border-color: #03d8f3; 
   background-color: #0a0a0a;
   box-shadow: 
-    0 0 20px rgba(3, 216, 243, 0.4),       /* Resplandor exterior cyan */
-    0 10px 20px rgba(0, 0, 0, 0.8),        /* Sombra inferior para dar profundidad */
-    inset 0 0 15px rgba(189, 0, 255, 0.3); /* Resplandor interior púrpura (vignette) */
-  z-index: 10; /* Asegura que la tarjeta activa se sobreponga a las demás */
+    0 0 20px rgba(3, 216, 243, 0.4),       
+    0 10px 20px rgba(0, 0, 0, 0.8),        
+    inset 0 0 15px rgba(189, 0, 255, 0.3); 
+  z-index: 10; 
 }
 
 .grid img {
@@ -78,28 +78,27 @@ nav ul {
     0 0 20px white;
 }
 
-/* --- EFECTOS CYBERPUNK SOLO PARA EL TEXTO --- */
+/* --- CYBERPUNK EFFECT FOR TEXT --- */
 
-/* 1. El texto base con una sutil aberración cromática constante */
-.glitch-text {
+.glitch-text { 
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow:
     1.5px 0 0 #ff003c,
-    /* Canal Rojo/Magenta */ -1.5px 0 0 #03d8f3; /* Canal Cyan */
+   -1.5px 0 0 #03d8f3;
   transition: all 0.3s ease;
 }
 
-/* 2. El texto se activa (Glitch + High Exposure + Bloom) al pasar el cursor por el artículo */
+ /* ACTIVATE TEXT (GLITCH + HIGH EXPOSURE + BLOOM) WHEN HOVER THE ARTICLE */
 .grid article:hover .glitch-text {
   transform: scale(1.1) skew(-3deg);
   text-shadow:
     4px 0 0 rgba(255, 0, 60, 0.9),
-    /* Aberración roja intensa */ -4px 0 0 rgba(3, 216, 243, 0.9),
-    /* Aberración cyan intensa */ 0 0 10px #fff,
-    /* Soft focus / Bloom (Núcleo blanco) */ 0 0 20px #ff003c,
-    /* Resplandor radial */ 0 0 30px #03d8f3; /* Resplandor radial */
+    -4px 0 0 rgba(3, 216, 243, 0.9),
+    0 0 10px #fff,
+    0 0 20px #ff003c,
+    0 0 30px #03d8f3; 
 }
 
 /* --- H1: NEON FLICKER EFFECT --- */
@@ -109,7 +108,7 @@ nav ul {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
-  /* El resplandor (Bloom) del tubo encendido */
+  /* TUBE BLOOM ON */
   text-shadow:
     0 0 5px #fff,
     0 0 10px #fff,
@@ -142,9 +141,9 @@ nav ul {
   24%,
   55% {
     text-shadow: 0 0 5px rgba(189, 0, 255, 0.2);
-    color: #444; /* El tubo físico se oscurece cuando se apaga la luz */
+    color: #444; 
     opacity: 0.7;
-    filter: blur(1px); /* Soft focus momentáneo */
+    filter: blur(1px); 
   }
 }
 
@@ -156,14 +155,14 @@ nav ul {
   text-transform: uppercase;
   letter-spacing: 5px;
   color: transparent;
-  /* Borde estilo plano de interfaz holográfica */
+  /* BORDER FLAT STYLE ON HOLOGRAPHIC INTERFACE */
   -webkit-text-stroke: 1px rgba(3, 216, 243, 0.5);
   margin: 40px 0 30px 0;
 }
 
-/* Capa 1: Fluido holográfico interno */
+/* LAYER 1: HOLOGRAPHIC INNER FLUID */
 .cyber-title::before {
-  content: attr(data-text); /* Toma el texto del HTML */
+  content: attr(data-text);
   position: absolute;
   left: 0;
   top: 0;
@@ -178,7 +177,7 @@ nav ul {
   z-index: 1;
 }
 
-/* Capa 2: Distorsión Glitch agresiva */
+/* LAYER 2: AGRESSIVE GLITCH DISTORTION */
 .cyber-title::after {
   content: attr(data-text);
   position: absolute;
@@ -187,12 +186,12 @@ nav ul {
   width: 100%;
   height: 100%;
   color: #fff;
-  background: #000; /* Cubre lo de atrás durante el glitch */
+  background: #000;
   -webkit-text-stroke: 0px transparent;
   text-shadow:
     -4px 0 #ff003c,
     4px 0 #03d8f3;
-  /* Recortamos el texto para que solo se vean franjas */
+  /* CUT THE TEXT TO SHOW ONLY THE STRIPES */
   clip-path: inset(100% 0 0 0);
   animation: cyber-glitch 3.5s infinite linear alternate-reverse;
   z-index: 2;
@@ -207,7 +206,7 @@ nav ul {
   }
 }
 
-/* Animamos la ventana de recorte para simular cortes de estática */
+/* ANIMATE THE CUTTING WINDOW TO SIMULATE STATIC CUTS */
 @keyframes cyber-glitch {
   0% {
     clip-path: inset(20% 0 70% 0);
@@ -228,21 +227,21 @@ nav ul {
   20% {
     clip-path: inset(100% 0 0 0);
     transform: translate(0);
-  } /* Pausa invisible */
+  } 
   100% {
     clip-path: inset(100% 0 0 0);
     transform: translate(0);
   }
 }
 
-/* --- EFECTO GLITCH PARA LOS PÁRRAFOS (<p>) --- */
+/* --- GLITCH EFFECT FOR PARAGRAPHS (<p>) --- */
 
-/* 1. Le damos una transición suave al estado normal del párrafo */
+/* SOFT TRANSITION TO NORMAL STATE PARAGRAPH */
 .grid article p {
   transition: all 0.3s ease;
 }
 
-/* 2. Activamos el efecto glitch que creaste cuando el cursor esté encima */
+/* ACTIVATE GLITCH EFFECT WHEN HOVER */
 .grid article:hover p {
   color: white;
   text-shadow:
@@ -251,9 +250,9 @@ nav ul {
     0 0 20px white;
 }
 
-/* Media Queries */
+/* MEDIA QUERIES*/
 
-/* Large devices (laptops/desktops, 992px and up) */
+/* LARGE DEVICES (LAPTOPS/DESKTOPS, 992PX AND UP) */
 @media only screen and (max-width: 992px) {
   .grid {
     font-size: 14px;
@@ -261,7 +260,7 @@ nav ul {
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+/* MEDIUM DEVICES (LANDSCAPE TABLETS, 768PX AND UP) */
 @media only screen and (max-width: 768px) {
   .grid {
     font-size: 13px;
@@ -269,7 +268,7 @@ nav ul {
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* SMALL DEVICES (PORTRAIT TABLETS AND LARGE PHONES, 600PX AND UP) */
 @media only screen and (max-width: 600px) {
   .grid {
     font-size: 13px;

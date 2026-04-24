@@ -21,8 +21,7 @@ A personal portfolio website built across three progressive weekly sprints, appl
 
 ## Live Demo
 
-> Open `index.html` directly in your browser. No build step or server required for local use.  
-> *(Note: audio autoplay on the pets page requires a user gesture first, which is standard browser behavior.)*
+> Open my portfolio in your browser located on my GitHub account: [Live Demo] (https://hchlyan.github.io/).  
 
 ----------------------------------------------------------------------------------
 
@@ -67,13 +66,12 @@ portfolio/
 
 ## Technologies
 
-| Layer      | Technology                              |
-|------------|-----------------------------------------|
-| Markup     | HTML5 (semantic tags, ARIA attributes)  |
+| Layer      | Technology                                                      |
+|------------|-----------------------------------------------------------------|
+| Markup     | HTML5                                                           |
 | Styling    | CSS3 — Flexbox, CSS Grid, Animations, `@keyframes`, `clip-path` |
-| Scripting  | Vanilla JavaScript (ES6+)               |
-| Assets     | WebP images, MP3 audio, PNG icons       |
-| Version Control | Git                                |
+| Scripting  | Vanilla JavaScript                                              |
+| Assets     | WebP images, MP3 audio, PNG icons                               |
 
 -----------------------------------------------------------------------------
 
@@ -97,14 +95,14 @@ portfolio/
 
 A secondary page showcasing six fictional pet companions in a responsive CSS Grid layout.
 
-| Pet      | Origin |
-|----------|--------|
-| Phoenix  | Mythology |
-| Pikachu  | Pokémon |
-| Kirara   | Inuyasha |
+| Pet      | Origin      |
+|----------|-------------|
+| Phoenix  | Mythology   |
+| Pikachu  | Pokémon     |
+| Kirara   | Inuyasha    |
 | Luna     | Sailor Moon |
-| Kirby    | Nintendo |
-| Kuriboh  | Yu-Gi-Oh! |
+| Kirby    | Nintendo    |
+| Kuriboh  | Yu-Gi-Oh!   |
 
 Each card includes an image, a glitch-styled name, and a description. Hovering plays the pet's sound clip via the Web Audio API.
 
@@ -115,7 +113,7 @@ Each card includes an image, a glitch-styled name, and a description. Hovering p
 ### `web.js/index.js`
 
 | Function | Trigger | Effect |
-|---|---|---|
+|----------|---------|--------|
 | `typeWriter()` | `window load` | Types the H1 text character by character |
 | `revealOnScroll()` | `window scroll` | Adds `.active` to `.reveal` elements when they enter the viewport |
 | Image modal | Click on `.expandable-image` | Opens fullscreen modal with the clicked image |
@@ -125,7 +123,7 @@ Each card includes an image, a glitch-styled name, and a description. Hovering p
 ### `web.js/pets.js`
 
 | Function | Trigger | Effect |
-|---|---|---|
+|----------|---------|--------|
 | Audio playback | `mouseenter` on pet image | Plays the pet's looping MP3 at 50% volume |
 | Audio stop | `mouseleave` on pet image | Pauses and resets the audio to the beginning |
 
@@ -133,14 +131,14 @@ Each card includes an image, a glitch-styled name, and a description. Hovering p
 
 ## Responsive Design
 
-Responsive breakpoints are currently implemented **only in `pets.css`**:
+Responsive breakpoints are currently implemented **only in `pets.css`**. But not in the index, because it's not necessary.
 
-| Breakpoint | Columns |
-|---|---|
+| Breakpoint        | Columns   |
+|-------------------|-----------|
 | ≥ 993px (desktop) | 6 columns |
-| ≤ 992px (laptop) | 3 columns |
-| ≤ 768px (tablet) | 2 columns |
-| ≤ 600px (mobile) | 1 column |
+| ≤ 992px (laptop)  | 3 columns |
+| ≤ 768px (tablet)  | 2 columns |
+| ≤ 600px (mobile)  | 1 column  |
 
 All images use `max-width: 100%; height: auto` for fluid scaling.
 
