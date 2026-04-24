@@ -1,16 +1,16 @@
-document.addEventListener("DOMContentLoaded", () => { 
+document.addEventListener("DOMContentLoaded", () => {
   const petImages = document.querySelectorAll(".hover");
 
-  petImages.forEach((img) => { 
+  petImages.forEach((img) => {
     const soundSrc = img.getAttribute("data-sound");
 
-    if (soundSrc) { 
+    if (soundSrc) {
       const audio = new Audio(soundSrc);
       audio.volume = 0.5;
       audio.loop = true;
 
       // EVENT: WHEN HOVER ON IMAGE
-      img.addEventListener("mouseenter", () => { 
+      img.addEventListener("mouseenter", () => {
         audio.play().catch((error) => {
           console.log("Couldn't play the sound:", error);
         });
