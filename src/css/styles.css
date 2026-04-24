@@ -38,20 +38,41 @@ body {
 .center {
   text-align: center;
 }
-
-/* IMAGES */
+ 
 img {
   width: 100%;
   max-width: 500px;
   height: auto;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--color-bg); 
+  padding: 10px 0; 
+}
+
 /* NAV */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
 nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
-  margin-bottom: 40px;
+}
+
+/* NAV BRAND (AUTHOR NAME IN HEADER) */
+.nav-brand {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  letter-spacing: 1px;
 }
 
 .navigation {
@@ -721,15 +742,19 @@ section {
 @media screen and (max-width: 768px) {
   .hamburger {
     display: flex;
-    position: fixed;
-    top: 25px;
-    right: 30px;
     z-index: 1000;
   }
 
   nav {
+    position: relative;
     display: flex;
     justify-content: flex-end;
+  }
+
+  .nav-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   /* HID THE ORIGINAL MENU AND TRANSFORM IT INTO A LATERAL PANEL */

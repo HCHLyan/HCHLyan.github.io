@@ -250,28 +250,40 @@ nav ul {
     0 0 20px white;
 }
 
-/* MEDIA QUERIES*/
+/* MEDIA QUERIES */
 
-/* LARGE DEVICES (LAPTOPS/DESKTOPS, 992PX AND UP) */
+/* TABLET AND LAPTOP (≤ 992PX): SWITCH TO FLEXBOX — 3 COLUMNS */
+/* DESKTOP USES CSS GRID; TABLET/MOBILE USE CSS FLEXBOX (FLEX-WRAP) */
 @media only screen and (max-width: 992px) {
   .grid {
-    font-size: 14px;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+  }
+
+  .grid article {
+    flex: 0 0 calc((100% - 40px) / 3);
   }
 }
 
-/* MEDIUM DEVICES (LANDSCAPE TABLETS, 768PX AND UP) */
+/* TABLET (≤ 768PX): FLEXBOX — 3 COLUMNS */
 @media only screen and (max-width: 768px) {
   .grid {
-    font-size: 13px;
-    grid-template-columns: repeat(2, 1fr);
+    font-size: 0.875rem;
+  }
+
+  .grid article {
+    flex: 0 0 calc((100% - 40px) / 3);
   }
 }
 
-/* SMALL DEVICES (PORTRAIT TABLETS AND LARGE PHONES, 600PX AND UP) */
-@media only screen and (max-width: 600px) {
+/* MOBILE (≤ 480PX): FLEXBOX — 2 COLUMNS */
+@media only screen and (max-width: 480px) {
   .grid {
-    font-size: 13px;
-    grid-template-columns: 1fr;
+    font-size: 0.8rem;
+  }
+
+  .grid article {
+    flex: 0 0 calc((100% - 20px) / 2);
   }
 }
