@@ -284,7 +284,7 @@ h3 {
 h2[data-glitch],
 h3[data-glitch] {
   position: relative;
-  font-size: 40px;
+  font-size: 2.5rem;
   animation: an1 1s ease-in-out infinite alternate;
 }
 
@@ -512,7 +512,7 @@ section {
 .social-links a {
   text-decoration: none;
   color: #fff;
-  font-size: 18px;
+  font-size: 1.125rem;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -558,21 +558,54 @@ section {
 }
 
 /* ANIMATION TO THE RIGHT (PROJECTS) */
-.projects-scroll .scroll-content {
-  animation: scroll-right 40s linear infinite;
+.projects-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
 }
 
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-50%);
-  }
+#experience .projects-links li a {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  color: var(--color-primary);
+  font-family: var(--font-main);
+  transition: 0.3s;
+}
 
-  100% {
-    transform: translateX(0);
+#experience .projects-links li a:hover {
+  background: var(--color-primary);
+  color: #000;
+  text-decoration: none;
+}
+
+/* ===== PROJECTS GRID  ===== */
+#experience .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  #experience .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* AANIMATION TO THE LEFT (EVIDENCES) */
+@media (max-width: 480px) {
+  #experience .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-links {
+    flex-direction: column;
+  }
+}
+
+/* ANIMATION TO THE LEFT (EVIDENCES) */
 .evidences-scroll .scroll-content {
   animation: scroll-left 40s linear infinite;
 }
